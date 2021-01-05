@@ -1,5 +1,6 @@
 [nginxWeb]: https://www.nginx.com/
 [localhost:8080]: http://localhost:8080
+
 # Ejemplo 1.3 | "MyFirstWeb"
 En este ejemplo se muestra lo sencillo que es montar un servidor web [nginx][nginxWeb] con nuestra primera web corriendo.
 
