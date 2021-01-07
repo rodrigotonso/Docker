@@ -1,5 +1,5 @@
 FROM nginx
-COPY index.html /usr/share/nginx/html
+COPY . /usr/share/nginx/html
 
 # nginx es el servidor web más utilizado junto a Apache
 # https://hub.docker.com/_/nginx
