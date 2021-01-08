@@ -22,10 +22,11 @@ El contexto es el espacio de trabajo del ordenador al que va a acceder Docker, s
 3. Ingresamos a http://localhost:8080
 4. Detenemos el contenedor: `docker stop Build1`
 5. Eliminamos la imagen: `docker rmi build1` 
-> Docker busca en el path que le indicamos el Dockerfile (en este caso el directorio actual "./") y construye la imagen. Se puede verificar que si se elimina el Dockerfile de este directorio el comando build anterior no funcionará.
+> Docker busca en el path que le indicamos en el Dockerfile (en este caso el directorio actual "./") y construye la imagen. Se puede verificar que si se elimina el Dockerfile de este directorio el comando build anterior no funcionará.
 
 #### Caso 2: Con URL
-1. Construimos la imagen: `docker build -t build2 https://github.com/rodrigotonso/Docker/tree/main/Unidad-2/1-Build`
+1. Construimos la imagen: `docker build -t build2 https://github.com/rodrigotonso/Docker.git#main:Unidad-2/1-Build`
+> Es importante remarcar que si es una URL a GitHub si el Dockerfile no esta en la raiz del repositorio se debe marcar el repositorio con .git, aclarar la rama y subdirección del Dockerfile es decir: `https://github.com/myUser/MyRepo.git#MyBranch:MySubDirectory`
 2. Corremos el contenedor: `docker run --name Build2 -d -p 8080:80 --rm build2`
 3. Ingresamos a http://localhost:8080
 4. Detenemos el contenedor: `docker stop Build2`
@@ -41,3 +42,4 @@ El contexto es el espacio de trabajo del ordenador al que va a acceder Docker, s
 > Como indicamos que no hay contexto Docker no copia nada al indicarle como dirección ".", si hubieramos indicado que copie "index.html" hubiera fallado con un "file does not exist".
 
 #### Property -t (target)
+Se explicó los fundamentos del comando **Build**, en otra unidad explicaremos las propiedades que pueden agregarse a este comando para modificar o expandir su comportamiento. Igualmente explicaremos (por la simplesa y el continuo uso que le daremos) la propiedad **target** a la que se puede referenciar como **-t**, esta propiedad simplemente le **asocia un nombre identificatorio a la imagen, con el cual luego podremos referinos a ella**.
