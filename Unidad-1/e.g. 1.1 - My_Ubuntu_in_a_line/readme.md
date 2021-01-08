@@ -9,7 +9,7 @@ Crearemos el más simple y vacío de los contenedores, simplemente el sistema op
 1. Con el comando [build][buildInDocker] construimos la imagen
    
    `docker build -t my-ubuntu .`
->-  **-t (target):** Nombre para identificar la imagen.
+>-  **-t (tag):** Nombre para identificar la imagen.
 >- Recordar que los tags no pueden contener mayúsculas ni guiones bajos ("_") [+info][tagsInDocker].
 
 2. Con el comando [run][runInDocker] arrancamos el contenedor
