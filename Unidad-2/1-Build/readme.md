@@ -1,7 +1,8 @@
 [buildInDocker]:https://docs.docker.com/engine/reference/commandline/build/
 [commandsListDocker]: https://docs.docker.com/engine/reference/commandline/docker/
 # 1-Build
-El comando [build][buildInDocker] es uno de los más importantes y sirve para construir imágenes a partir del Dockerfile y de un "contexto".
+
+El comando [build][buildInDocker] es uno de los más importantes y sirve para construir imágenes a partir del **Dockerfile** y de un **"contexto"**.
 El contexto es el conjunto de archivos localizados en el path (o url en su defecto), es importante tener presente que Docker no nos permitirá trabajar con nada que este fuera de su contexto.
 
 En los siguientes ejemplos iremos viendo el comportamiento de este comando, se utilizarán distintos "Dockerfile" ubicados en múltiples sitios.
@@ -9,8 +10,7 @@ En los siguientes ejemplos iremos viendo el comportamiento de este comando, se u
 ## Ejemplos **BUILD**
  Ejecución de Docker build solo con la option "*tag*". En el comando build Docker exige unicamente que le aclaremos el contexto con [ **PATH** , **URL** , **-** ].
 
->**Forma del comando** \
-`docker run [options] PATH | URL | -`
+**Forma del comando**: `docker build [options] PATH | URL | -`
 
 ### Diferencia entre PATH, URL y -
 Docker necesita conocer el contexto del servidor en el cual va a trabajar, este contexto puede ser dado por una ruta o PATH, una url o se le puede indicar que **solamente** lea el Dockerfile sin considerar contexto. \

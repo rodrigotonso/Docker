@@ -16,9 +16,9 @@ Crearemos el más simple y vacío de los contenedores, simplemente el sistema op
    
    `docker run --name ubuntu_simple --rm -it my-ubuntu`
 
->- La única referencia obligatoria es la imagen, en este caso "my-ubuntu" que generamos en el paso anterior.
->- **-rm (remove):** Elimina el contenedor cuando nos retiramos del mismo.
->- **-i (STDIN) -t (pseudo-TTY):** La explicación de estos términos se realizara más adelante, simplemente hay que saber que si se desea trabajar de forma iterativa deben estar.
+	>- La única referencia obligatoria es la imagen, en este caso "my-ubuntu" que generamos en el paso anterior.
+	>- **-rm (remove):** Elimina el contenedor cuando nos retiramos del mismo.
+	>- **-i (STDIN) -t (pseudo-TTY):** La explicación de estos términos se realizara más adelante, simplemente hay que saber que si se desea trabajar de forma iterativa deben estar.
 
 3. Ahora podemos recorrer por consola el sistema operativo comprobando que estamos dentro de un Ubuntu, ej: 
    
